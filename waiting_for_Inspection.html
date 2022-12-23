@@ -83,13 +83,8 @@
             <div id="emad_chart" dir="ltr"></div>
           </div>
         </div>
-
       </div>
-
     </section>
-
-
-
   </content>
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
   <!--((((((((((((((((( / content )))))))))))))))))))-->
@@ -127,7 +122,6 @@
     $("header").load("header.html");
     $("footer").load("footer.html");
   </script>
-
   <!-- apex charts -->
   <script src="js/apexcharts.min.js"></script>
   <script>
@@ -160,7 +154,6 @@
       xaxis: {
         categories: ['م/ عماد سلام', 'م/ محمود الكومي', 'م/ محمد العشري ', 'م/ خالد ', 'م/ وليد ', 'م/ مدحت ', 'م/ حسام ', 'م/ محسن ', ' اخرين '],
       },
-
       fill: {
         opacity: 1
       },
@@ -171,7 +164,7 @@
           }
         }
       },
-      colors: ['#6cafb0', '#eb5c93', '#17c3a3', '#5895ec', '#a847dc', '#d48ae2', '#fe8338'],
+      colors: ['#6cafb0', '#eb5c93', '#17c3a3', '#5895ec', '#647889', '#d48ae2', '#fe8338'],
     };
     var chart = new ApexCharts(document.querySelector("#waitting_requests"), options);
     chart.render();
@@ -193,7 +186,6 @@
         bar: {
           borderRadius: 5,
           horizontal: false,
-          columnWidth: '20%',
           endingShape: 'rounded'
         },
       },
@@ -218,22 +210,19 @@
           }
         }
       },
-      colors: ['#6cafb0', '#eb5c93', '#17c3a3', '#5895ec', '#a847dc', '#d48ae2', '#fe8338'],
-
+      colors: ['#6cafb0', '#eb5c93', '#17c3a3', '#5895ec', '#647889', '#d48ae2', '#fe8338'],
     };
     var chart = new ApexCharts(document.querySelector("#mahmoud_chart"), options);
     chart.render();
-
-
     // emad chart
     var options = {
       series: [{
         name: ' سلسة 1 ',
-        data: [200, 160 , 76]
+        data: [200, 160, 76]
       },
       {
         name: ' سلسة 2 ',
-        data: [44, 240 , 134]
+        data: [44, 240, 134]
       }],
       chart: {
         type: 'bar',
@@ -243,7 +232,6 @@
         bar: {
           borderRadius: 5,
           horizontal: false,
-          columnWidth: '20%',
           endingShape: 'rounded'
         },
       },
@@ -268,19 +256,11 @@
           }
         }
       },
-      colors: ['#6cafb0', '#eb5c93', '#17c3a3', '#5895ec', '#a847dc', '#d48ae2', '#fe8338'],
-
+      colors: ['#6cafb0', '#eb5c93', '#17c3a3', '#5895ec', '#647889', '#d48ae2', '#fe8338'],
     };
     var chart = new ApexCharts(document.querySelector("#emad_chart"), options);
     chart.render();
-
-
-
-
-
-
   </script>
-
 </body>
 
 </html>

@@ -48,43 +48,39 @@
           </a>
         </li>
         <li>
-          <a href="#!">
+          <a href="reports.html">
             التقارير
+          </a>
+        </li>
+        <li>
+          <a href="##!">
+            MEC-Dashboard
           </a>
         </li>
       </ul>
     </section>
+    <!-- charts -->
+    <section class="charts">
+      <div class="row">
+        <!-- chart -->
+        <div class="col-12 p-2">
+          <div class="chartDiv">
+            <p class="title"> TOTAL INSPECTION REQUEST </p>
+            <div id="total_inspection_chart" dir="ltr"></div>
+          </div>
+        </div>
+        <!-- chart -->
+        <div class="col-md-6 col-lg-4 p-2">
+          <div class="chartDiv">
+            <p class="title"> م / احمد توفيق </p>
+            <div id="ahmed_tawfek_chart" dir="ltr"></div>
+          </div>
+        </div>
 
-    <!-- all reports page -->
-    <section class="allReportsPage">
-      <a href="waiting_for_Inspection.html" class="reportMain">
-        <img src="img/inspection.png" alt="">
-        <h5> Waiting for Inspection </h5>
-      </a>
-      <a href="mec_dashboard.html" class="reportMain">
-        <img src="img/mec.png" alt="">
-        <h5> MEC-Dashboard </h5>
-      </a>
-      <a href="#!" class="reportMain">
-        <img src="img/contractors.png" alt="">
-        <h5> Contractors DashBoard </h5>
-      </a>
-      <a href="#!" class="reportMain">
-        <img src="img/comments.png" alt="">
-        <h5> mec comments </h5>
-      </a>
-      <a href="#!" class="reportMain">
-        <img src="img/comments date.png" alt="">
-        <h5> mec comments date </h5>
-      </a>
-      <a href="#!" class="reportMain">
-        <img src="img/worksheet.png" alt="">
-        <h5> Work Sheet </h5>
-      </a>
+
+      </div>
+
     </section>
-
-
-
 
 
 
@@ -125,6 +121,79 @@
     $("header").load("header.html");
     $("footer").load("footer.html");
   </script>
+
+  <!-- apex charts -->
+  <script src="js/apexcharts.min.js"></script>
+  <script>
+    // total inspection chart
+    var options = {
+      series: [{
+        name: '',
+        data: [240 , 234 , 210 , 203 , 196 , 155, 120 , 30 , 20 ]
+      }],
+      chart: {
+        height: 250,
+        type: 'bar',
+      },
+      colors: ['#6cafb0', '#eb5c93', '#17c3a3', '#5895ec', '#647889', '#d48ae2', '#fe8338'],
+      plotOptions: {
+        bar: {
+          columnWidth: '20%',
+          borderRadius: 5,
+          distributed: true,
+        }
+      },
+      dataLabels: {
+        enabled: false
+      },
+      legend: {
+        show: false
+      },
+      xaxis: {
+        categories: ['م/ عماد سلام', 'م/ محمود الكومي', 'م/ محمد العشري ', 'م/ خالد ', 'م/ وليد ', 'م/ مدحت ', 'م/ حسام ', 'م/ محسن ', ' اخرين '],
+        
+      }
+    };
+    var chart = new ApexCharts(document.querySelector("#total_inspection_chart"), options);
+    chart.render();
+    // ahmed tawfek chart
+    var options = {
+      series: [{
+        name: '',
+        data: [22, 260, 13, 0, 1]
+      }],
+      chart: {
+        height: 250,
+        type: 'bar',
+      },
+      colors: ['#6cafb0', '#eb5c93', '#17c3a3', '#5895ec', '#647889', '#d48ae2', '#fe8338'],
+      plotOptions: {
+        bar: {
+          borderRadius: 5,
+          distributed: true,
+        }
+      },
+      dataLabels: {
+        enabled: false
+      },
+      legend: {
+        show: false
+      },
+      xaxis: {
+        categories: ['A', 'B', 'C', 'D', 'معلق'],
+        labels: {
+          style: {
+            colors: ['#6cafb0', '#eb5c93', '#17c3a3', '#5895ec', '#647889', '#d48ae2', '#fe8338'],
+            fontSize: '12px'
+          }
+        }
+      }
+    };
+    var chart = new ApexCharts(document.querySelector("#ahmed_tawfek_chart"), options);
+    chart.render();
+
+  </script>
+
 </body>
 
 </html>

@@ -529,6 +529,10 @@ content {
   margin-right: 0px !important;
 }
 
+.apexcharts-menu-item {
+  white-space: nowrap;
+}
+
 .charts {
   margin-bottom: 30px;
 }
