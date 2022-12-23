@@ -59,9 +59,37 @@
         </li>
       </ul>
     </section>
-    <!-- create project -->
+    <!-- charts -->
+    <section class="charts">
+      <div class="row">
+        <!-- chart -->
+        <div class="col-12 p-2">
+          <div class="chartDiv">
+            <h6 class="title"> NUMBER OF WAITING REQUEST </h6>
+            <div id="waitting_requests" dir="ltr"></div>
+          </div>
+        </div>
+        <!-- chart -->
+        <div class="col-md-6 col-lg-4 p-2">
+          <div class="chartDiv">
+            <p class="title"> م / محمود الكومي </p>
+            <div id="mahmoud_chart" dir="ltr"></div>
+          </div>
+        </div>
+        <!-- chart -->
+        <div class="col-md-6 col-lg-4 p-2">
+          <div class="chartDiv">
+            <p class="title"> م / عماد سلام </p>
+            <div id="emad_chart" dir="ltr"></div>
+          </div>
+        </div>
 
-    
+      </div>
+
+    </section>
+
+
+
   </content>
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
   <!--((((((((((((((((( / content )))))))))))))))))))-->
@@ -99,6 +127,110 @@
     $("header").load("header.html");
     $("footer").load("footer.html");
   </script>
+
+  <!-- apex charts -->
+  <script src="js/apexcharts.min.js"></script>
+  <script>
+    // NUMBER OF WAITING REQUEST
+    var options = {
+      series: [{
+        name: ' ',
+        data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
+      }],
+      chart: {
+        type: 'bar',
+        height: 350
+      },
+      plotOptions: {
+        bar: {
+          borderRadius: 10,
+          horizontal: false,
+          columnWidth: '20%',
+          endingShape: 'rounded'
+        },
+      },
+      dataLabels: {
+        enabled: false
+      },
+      stroke: {
+        show: true,
+        width: 2,
+        colors: ['transparent']
+      },
+      xaxis: {
+        categories: ['م/ عماد سلام', 'م/ محمود الكومي', 'م/ محمد العشري ', 'م/ خالد ', 'م/ وليد ', 'م/ مدحت ', 'م/ حسام ', 'م/ محسن ', ' اخرين '],
+      },
+
+      fill: {
+        opacity: 1
+      },
+      tooltip: {
+        y: {
+          formatter: function (val) {
+            return val + " " + " مشروع "
+          }
+        }
+      },
+      colors: ['#6cafb0', '#eb5c93', '#17c3a3', '#5895ec', '#a847dc', '#d48ae2', '#fe8338'],
+    };
+    var chart = new ApexCharts(document.querySelector("#waitting_requests"), options);
+    chart.render();
+    // mahmoud chart
+    var options = {
+      series: [{
+        name: ' سلسة 1 ',
+        data: [200, 160]
+      },
+      {
+        name: ' سلسة 2 ',
+        data: [44, 240]
+      }],
+      chart: {
+        type: 'bar',
+        height: 250
+      },
+      plotOptions: {
+        bar: {
+          borderRadius: 5,
+          horizontal: false,
+          columnWidth: '20%',
+          endingShape: 'rounded'
+        },
+      },
+      dataLabels: {
+        enabled: false
+      },
+      stroke: {
+        show: true,
+        width: 2,
+        colors: ['transparent']
+      },
+      xaxis: {
+        categories: ['المستودعات الاوالي', 'المستودعات الثانية'],
+      },
+      fill: {
+        opacity: 1
+      },
+      tooltip: {
+        y: {
+          formatter: function (val) {
+            return val + " " + " يوم "
+          }
+        }
+      },
+      colors: ['#6cafb0', '#eb5c93', '#17c3a3', '#5895ec', '#a847dc', '#d48ae2', '#fe8338'],
+
+    };
+    var chart = new ApexCharts(document.querySelector("#mahmoud_chart"), options);
+    chart.render();
+
+
+
+
+
+
+  </script>
+
 </body>
 
 </html>

@@ -504,6 +504,41 @@ content {
     }
   }
 }
+.apexcharts-legend-text,
+.apexcharts-tooltip *,
+.apexcharts-tooltip-title,
+.apexcharts-text tspan{
+  font-family: "montserrat", sans-serif !important;
+}
+.apexcharts-text tspan{
+  direction: ltr;
+}
+.apexcharts-legend-marker{
+  margin-right: 0 !important;
+  margin-left: 3px;
+}
+.apexcharts-tooltip-marker{
+  margin-left: 8px;
+  margin-right: 0px !important;
+}
+
+.charts{
+  margin-bottom: 30px;
+  .chartDiv{
+    padding: 16px;
+    border-radius: 16px;
+    background-color: $whiteColor;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .title{
+      font-weight: bold;
+      color: $textColor;
+    }
+  }
+}
+
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
