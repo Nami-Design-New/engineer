@@ -225,6 +225,56 @@
     chart.render();
 
 
+    // emad chart
+    var options = {
+      series: [{
+        name: ' سلسة 1 ',
+        data: [200, 160 , 76]
+      },
+      {
+        name: ' سلسة 2 ',
+        data: [44, 240 , 134]
+      }],
+      chart: {
+        type: 'bar',
+        height: 250
+      },
+      plotOptions: {
+        bar: {
+          borderRadius: 5,
+          horizontal: false,
+          columnWidth: '20%',
+          endingShape: 'rounded'
+        },
+      },
+      dataLabels: {
+        enabled: false
+      },
+      stroke: {
+        show: true,
+        width: 2,
+        colors: ['transparent']
+      },
+      xaxis: {
+        categories: ['المستودعات الاوالي', 'المستودعات الثانية', 'المستودعات الثالثة'],
+      },
+      fill: {
+        opacity: 1
+      },
+      tooltip: {
+        y: {
+          formatter: function (val) {
+            return val + " " + " يوم "
+          }
+        }
+      },
+      colors: ['#6cafb0', '#eb5c93', '#17c3a3', '#5895ec', '#a847dc', '#d48ae2', '#fe8338'],
+
+    };
+    var chart = new ApexCharts(document.querySelector("#emad_chart"), options);
+    chart.render();
+
+
 
 
 
