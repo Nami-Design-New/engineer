@@ -130,7 +130,7 @@ span.select2.select2-container.select2-container--default {
 
 .select2-dropdown {
   border-radius: 4px;
-  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1254901961) !important;
+  box-shadow: 0px 4px 24px #d5e8e9 !important;
   border-color: transparent;
 }
 
@@ -343,7 +343,6 @@ content {
 
 .controlSection {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
   padding: 30px;
   border-radius: 16px;
@@ -351,6 +350,7 @@ content {
   box-shadow: inset 5px 5px 9px #e9e9ef, inset -5px -5px 9px #fdfdff;
 }
 .controlSection .control {
+  text-align: center;
   flex: 1;
   min-width: 150px;
   padding: 24px 16px;
@@ -359,9 +359,10 @@ content {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  justify-content: center;
   align-items: center;
   color: #231f20;
+  position: relative;
+  transition: all 0.3s ease-in-out;
 }
 .controlSection .control img {
   height: 60px;
@@ -369,11 +370,17 @@ content {
   -o-object-fit: contain;
      object-fit: contain;
 }
+.controlSection .control:hover {
+  z-index: 2;
+  box-shadow: 0px 4px 24px #d5e8e9;
+  transform: translate(0, -5px);
+}
 
 .routeNav {
   display: flex;
   align-items: center;
   border-radius: 16px;
+  background-color: #f3f3f9;
   box-shadow: inset 5px 5px 9px #e9e9ef, inset -5px -5px 9px #fdfdff;
   padding: 16px;
   padding-right: 24px;
@@ -457,13 +464,48 @@ content {
 }
 .createProject form .btnDiv {
   text-align: center;
-  padding-top: 50px;
+  padding-top: 70px;
 }
 .createProject form .btnDiv .btn {
   padding: 12px;
   background-color: #6cafb0;
   color: #ffffff;
   width: min(100% - 30px, 200px);
+}
+
+.allReportsPage {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  border-radius: 16px;
+  gap: 16px;
+  box-shadow: inset 5px 5px 9px #e9e9ef, inset -5px -5px 9px #fdfdff;
+}
+.allReportsPage .reportMain {
+  text-align: center;
+  flex: 1;
+  min-width: 250px;
+  padding: 24px 16px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  color: #231f20;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.allReportsPage .reportMain img {
+  height: 60px;
+  width: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.allReportsPage .reportMain:hover {
+  z-index: 2;
+  box-shadow: 0px 4px 24px #d5e8e9;
+  transform: translate(0, -5px);
 }
 
 /* PC device :992px. */

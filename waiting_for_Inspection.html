@@ -21,6 +21,9 @@
   <link rel="stylesheet" href="css/select2.min.css" />
   <!-- odometer -->
   <link rel="stylesheet" href="css/odometer.min.css" />
+  <!-- Filepond css -->
+  <link rel="stylesheet" href="css/filepond.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/filepond-plugin-image-preview.min.css">
   <!-- Custom style  -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -33,50 +36,32 @@
   <!--((((((((((((((((((( content )))))))))))))))))))-->
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
   <content>
-    <!-- statistics -->
-    <section class="statisticsSection">
-      <div class="row g-4">
-        <a href="#!" class="statistic col-sm-6 col-md-4 col-lg-3">
-          <h5 class="top">
-            <i class="fa-light fa-diagram-project"></i>
-            المشاريع
-          </h5>
-          <div class="body">
-            <h1 class="odometer" data-count="5">00</h1>
-            <p> مشروع </p>
-          </div>
-        </a>
-        <a href="#!" class="statistic col-sm-6 col-md-4 col-lg-3">
-          <h5 class="top">
-            <i class="fa-light fa-helmet-safety"></i>
-            المهندسين
-          </h5>
-          <div class="body">
-            <h1 class="odometer" data-count="93">00</h1>
-            <p> مهندس </p>
-          </div>
-        </a>
-      </div>
+    <!-- route Nav -->
+    <section class="routeNav">
+      <button onclick="history.back()" class="Back">
+        <i class="fa-light fa-arrow-right"></i>
+      </button>
+      <ul class="navigetor">
+        <li>
+          <a href="index.html">
+            الرئيسية
+          </a>
+        </li>
+        <li>
+          <a href="reports.html">
+            التقارير
+          </a>
+        </li>
+        <li>
+          <a href="##!">
+            Waiting for Inspection
+          </a>
+        </li>
+      </ul>
     </section>
-    <!--control -->
-    <section class="controlSection">
-      <a href="create_project.html" class="control">
-        <img src="img/create project.png" alt="">
-        <h5> انشاء مشروع </h5>
-      </a>
-      <a href="reports.html" class="control">
-        <img src="img/report.png" alt="">
-        <h5> التقارير </h5>
-      </a>
-      <a href="#!" class="control">
-        <img src="img/powers.png" alt="">
-        <h5> الصلاحيات </h5>
-      </a>
-      <a href="#!" class="control">
-        <img src="img/project management.png" alt="">
-        <h5> إدارة المشاريع </h5>
-      </a>
-    </section>
+    <!-- create project -->
+
+    
   </content>
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
   <!--((((((((((((((((( / content )))))))))))))))))))-->
@@ -103,6 +88,10 @@
   <script src="js/aos.js"></script>
   <!-- odometer counterUp  -->
   <script src="js/odometer.min.js"></script>
+  <!-- filepond js -->
+  <script src="https://unpkg.com/filepond/dist/filepond.min.js"></script>
+  <script src="https://unpkg.com/jquery-filepond/filepond.jquery.js"></script>
+  <script src="js/filepond-plugin-image-preview.min.js"></script>
   <!-- custom -->
   <script src="js/Custom.js"></script>
   <!-- load header and footer -->
