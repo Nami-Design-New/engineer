@@ -525,6 +525,7 @@ content {
   white-space: nowrap;
 }
 
+
 .charts{
   margin-bottom: 30px;
   .chartDiv{
@@ -534,10 +535,35 @@ content {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    height: 100%;
 
     .title{
       font-weight: bold;
       color: $textColor;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      span{
+        color: $mainColor;
+      }
+    }
+    .hint{
+      color: $textColor;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      span{
+        color: $mainColor;
+        font-weight: bold;
+      }
+    }
+
+    .apexChart{
+      margin-top: auto;
     }
   }
 }

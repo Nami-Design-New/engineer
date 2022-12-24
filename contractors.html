@@ -54,7 +54,7 @@
         </li>
         <li>
           <a href="##!">
-            Waiting for Inspection
+            Contractors Dashboard
           </a>
         </li>
       </ul>
@@ -63,24 +63,19 @@
     <section class="charts">
       <div class="row">
         <!-- chart -->
-        <div class="col-12 p-2">
+        <div class="col-md-6 col-lg-4 p-2">
           <div class="chartDiv">
-            <h6 class="title"> NUMBER OF WAITING REQUEST </h6>
-            <div id="waitting_requests" class="apexChart" dir="ltr"></div>
+            <p class="title"> المستودعات الثانية <span> الحجاج </span> </p>
+            <p class="hint"> Inspected Request (Nos) <span>1004</span> </p>
+            <div id="el7gag_chart" class="apexChart" dir="ltr"></div>
           </div>
         </div>
         <!-- chart -->
         <div class="col-md-6 col-lg-4 p-2">
           <div class="chartDiv">
-            <p class="title"> م / محمود الكومي </p>
-            <div id="mahmoud_chart" class="apexChart" dir="ltr"></div>
-          </div>
-        </div>
-        <!-- chart -->
-        <div class="col-md-6 col-lg-4 p-2">
-          <div class="chartDiv">
-            <p class="title"> م / عماد سلام </p>
-            <div id="emad_chart" class="apexChart" dir="ltr"></div>
+            <p class="title"> المستودعات الثانية <span> الحجاج </span> </p>
+            <p class="hint"> حالة اعتماد المواد والمخططات </p>
+            <div id="el7gag_side_chart" class="apexChart" dir="ltr"></div>
           </div>
         </div>
       </div>
@@ -125,140 +120,38 @@
   <!-- apex charts -->
   <script src="js/apexcharts.min.js"></script>
   <script>
-    // NUMBER OF WAITING REQUEST
+    // el7gag chart
     var options = {
-      series: [{
-        name: ' ',
-        data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
-      }],
-      chart: {
-        type: 'bar',
-        height: 350
-      },
-      plotOptions: {
-        bar: {
-          borderRadius: 10,
-          horizontal: false,
-          columnWidth: '20%',
-          endingShape: 'rounded'
-        },
-      },
-      dataLabels: {
-        enabled: false
-      },
-      stroke: {
-        show: true,
-        width: 2,
-        colors: ['transparent']
-      },
-      xaxis: {
-        categories: ['م/ عماد سلام', 'م/ محمود الكومي', 'م/ محمد العشري ', 'م/ خالد ', 'م/ وليد ', 'م/ مدحت ', 'م/ حسام ', 'م/ محسن ', ' اخرين '],
-      },
-      fill: {
-        opacity: 1
-      },
-      tooltip: {
-        y: {
-          formatter: function (val) {
-            return val + " " + " مشروع "
-          }
-        }
-      },
+      series: [4, 55, 24, 1],
+      labels: ["A", "B", "C", "D"],
+      chart: { height: 300, type: "donut" },
+      legend: { position: "bottom" },
+      dataLabels: { dropShadow: { enabled: !1 } },
       colors: ['#6cafb0', '#eb5c93', '#17c3a3', '#5895ec', '#647889', '#d48ae2', '#fe8338'],
     };
-    var chart = new ApexCharts(document.querySelector("#waitting_requests"), options);
+    var chart = new ApexCharts(document.querySelector("#el7gag_chart"), options);
     chart.render();
-    // mahmoud chart
+    // el7gag side chart
     var options = {
-      series: [{
-        name: ' سلسة 1 ',
-        data: [200, 160]
-      },
-      {
-        name: ' سلسة 2 ',
-        data: [44, 240]
-      }],
+      series: [
+        { name: "المعتمد", data: [38, 80] },
+        { name: "الاجمالي", data: [113, 250] },
+      ],
       chart: {
-        type: 'bar',
-        height: 250
+        type: "bar",
+        height: 250,
+        stacked: !0,
+        toolbar: { show: !1 },
       },
-      plotOptions: {
-        bar: {
-          borderRadius: 5,
-          horizontal: false,
-          endingShape: 'rounded'
-        },
-      },
-      dataLabels: {
-        enabled: false
-      },
-      stroke: {
-        show: true,
-        width: 2,
-        colors: ['transparent']
-      },
+      plotOptions: { bar: { horizontal: !0 } },
+      stroke: { width: 1, colors: ["#fff"] },
       xaxis: {
-        categories: ['المستودعات الاوالي', 'المستودعات الثانية'],
+        categories: ['المواد', 'المخططات']
       },
-      fill: {
-        opacity: 1
-      },
-      tooltip: {
-        y: {
-          formatter: function (val) {
-            return val + " " + " يوم "
-          }
-        }
-      },
+      fill: { opacity: 1 },
       colors: ['#6cafb0', '#eb5c93', '#17c3a3', '#5895ec', '#647889', '#d48ae2', '#fe8338'],
     };
-    var chart = new ApexCharts(document.querySelector("#mahmoud_chart"), options);
-    chart.render();
-    // emad chart
-    var options = {
-      series: [{
-        name: ' سلسة 1 ',
-        data: [200, 160, 76]
-      },
-      {
-        name: ' سلسة 2 ',
-        data: [44, 240, 134]
-      }],
-      chart: {
-        type: 'bar',
-        height: 250
-      },
-      plotOptions: {
-        bar: {
-          borderRadius: 5,
-          horizontal: false,
-          endingShape: 'rounded'
-        },
-      },
-      dataLabels: {
-        enabled: false
-      },
-      stroke: {
-        show: true,
-        width: 2,
-        colors: ['transparent']
-      },
-      xaxis: {
-        categories: ['المستودعات الاوالي', 'المستودعات الثانية', 'المستودعات الثالثة'],
-      },
-      fill: {
-        opacity: 1
-      },
-      tooltip: {
-        y: {
-          formatter: function (val) {
-            return val + " " + " يوم "
-          }
-        }
-      },
-      colors: ['#6cafb0', '#eb5c93', '#17c3a3', '#5895ec', '#647889', '#d48ae2', '#fe8338'],
-    };
-    var chart = new ApexCharts(document.querySelector("#emad_chart"), options);
+    var chart = new ApexCharts(document.querySelector("#el7gag_side_chart"), options);
     chart.render();
   </script>
 </body>

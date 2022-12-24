@@ -543,10 +543,33 @@ content {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  height: 100%;
 }
 .charts .chartDiv .title {
   font-weight: bold;
   color: #777777;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.charts .chartDiv .title span {
+  color: #6cafb0;
+}
+.charts .chartDiv .hint {
+  color: #777777;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.charts .chartDiv .hint span {
+  color: #6cafb0;
+  font-weight: bold;
+}
+.charts .chartDiv .apexChart {
+  margin-top: auto;
 }
 
 /* PC device :992px. */
