@@ -63,7 +63,7 @@
     <section class="charts">
       <div class="row">
         <!-- chart -->
-        <div class="col-md-6 col-lg-4 p-2">
+        <div class="col-lg-6 p-2">
           <div class="chartDiv">
             <p class="title"> المستودعات الثانية <span> الحجاج </span> </p>
             <p class="hint"> Inspected Request (Nos) <span>1004</span> </p>
@@ -71,11 +71,19 @@
           </div>
         </div>
         <!-- chart -->
-        <div class="col-md-6 col-lg-4 p-2">
+        <div class="col-lg-6 p-2">
           <div class="chartDiv">
             <p class="title"> المستودعات الثانية <span> الحجاج </span> </p>
             <p class="hint"> حالة اعتماد المواد والمخططات </p>
             <div id="el7gag_side_chart" class="apexChart" dir="ltr"></div>
+          </div>
+        </div>
+        <!-- chart -->
+        <div class="col-lg-8 p-2">
+          <div class="chartDiv">
+            <p class="title"> المستودعات الثانية <span> الحجاج </span> </p>
+            <p class="hint"> DEPARTMENT WISE ACTION CODE </p>
+            <div id="el7gag_department_chart" class="apexChart" dir="ltr"></div>
           </div>
         </div>
       </div>
@@ -153,6 +161,56 @@
     };
     var chart = new ApexCharts(document.querySelector("#el7gag_side_chart"), options);
     chart.render();
+
+    // el7gag side chart
+    var options = {
+      series: [{
+        name: ' A ',
+        data: [0, 24, 57, 56, 61, 58, 63]
+      },
+      {
+        name: ' B ',
+        data: [19, 418 , 57, 56, 61, 58, 63]
+      },
+      {
+        name: ' C ',
+        data: [21, 55, 57, 56, 61, 58, 63]
+      },
+      {
+        name: ' D ',
+        data: [0, 55, 57, 56, 61, 58, 63]
+      },],
+      chart: {
+        type: 'bar',
+        height: 350
+      },
+      plotOptions: {
+        bar: {
+          horizontal: false,
+          endingShape: 'rounded'
+        },
+      },
+      dataLabels: {
+        enabled: false
+      },
+      stroke: {
+        show: true,
+        width: 2,
+        colors: ['transparent']
+      },
+      xaxis: {
+        categories: ['معماري', ' إنشائي ', ' ميكانيكا  ', ' كهرباء ', ' عام ', ' مساحة '],
+      },
+      fill: {
+        opacity: 1
+      },
+    
+      colors: ['#6cafb0', '#eb5c93', '#17c3a3', '#5895ec', '#647889', '#d48ae2', '#fe8338'],
+    };
+     var chart = new ApexCharts(document.querySelector("#el7gag_department_chart"), options);
+    chart.render();
+
+
   </script>
 </body>
 

@@ -507,28 +507,27 @@ content {
 .apexcharts-legend-text,
 .apexcharts-tooltip *,
 .apexcharts-tooltip-title,
-.apexcharts-text tspan{
+.apexcharts-text tspan {
   font-family: "montserrat", sans-serif !important;
 }
-.apexcharts-text tspan{
+.apexcharts-text tspan {
   direction: ltr;
 }
-.apexcharts-legend-marker{
+.apexcharts-legend-marker {
   margin-right: 0 !important;
   margin-left: 3px;
 }
-.apexcharts-tooltip-marker{
+.apexcharts-tooltip-marker {
   margin-left: 8px;
   margin-right: 0px !important;
 }
-.apexcharts-menu-item{
+.apexcharts-menu-item {
   white-space: nowrap;
 }
 
-
-.charts{
+.charts {
   margin-bottom: 30px;
-  .chartDiv{
+  .chartDiv {
     padding: 16px;
     border-radius: 16px;
     background-color: $whiteColor;
@@ -537,18 +536,18 @@ content {
     gap: 16px;
     height: 100%;
 
-    .title{
+    .title {
       font-weight: bold;
       color: $textColor;
       display: flex;
       align-items: center;
       flex-wrap: wrap;
       gap: 8px;
-      span{
+      span {
         color: $mainColor;
       }
     }
-    .hint{
+    .hint {
       color: $textColor;
       display: flex;
       justify-content: space-between;
@@ -556,13 +555,13 @@ content {
       flex-wrap: wrap;
       gap: 8px;
 
-      span{
+      span {
         color: $mainColor;
         font-weight: bold;
       }
     }
 
-    .apexChart{
+    .apexChart {
       margin-top: auto;
     }
   }
