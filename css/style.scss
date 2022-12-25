@@ -417,6 +417,7 @@ content {
         padding: 10px 20px;
         display: flex;
         align-items: center;
+        text-transform: capitalize;
         img {
           width: 20px;
           height: 20px;
@@ -471,6 +472,7 @@ content {
     }
   }
 }
+
 .allReportsPage {
   display: flex;
   flex-wrap: wrap;
@@ -504,6 +506,44 @@ content {
     }
   }
 }
+.WorkSheet{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  border-radius: 16px;
+  gap: 16px;
+  box-shadow: inset 5px 5px 9px #e9e9ef, inset -5px -5px 9px #fdfdff;
+  .reportMain {
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+    padding: 24px 16px;
+    background-color: $whiteColor;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    color: $blackColor;
+    position: relative;
+    transition: $transition;
+    h5{
+      text-transform: capitalize;
+    }
+    img {
+      height: 60px;
+      width: 60px;
+      object-fit: contain;
+    }
+    &:hover {
+      z-index: 2;
+      box-shadow: $BigShadow;
+      transform: translate(0, -5px);
+    }
+  }
+}
+
+
 .apexcharts-legend-text,
 .apexcharts-tooltip *,
 .apexcharts-tooltip-title,
@@ -592,6 +632,7 @@ content {
     }
   }
 }
+
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================

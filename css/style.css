@@ -423,6 +423,7 @@ content {
   padding: 10px 20px;
   display: flex;
   align-items: center;
+  text-transform: capitalize;
 }
 .routeNav .navigetor li a img {
   width: 20px;
@@ -503,6 +504,44 @@ content {
      object-fit: contain;
 }
 .allReportsPage .reportMain:hover {
+  z-index: 2;
+  box-shadow: 0px 4px 24px #d5e8e9;
+  transform: translate(0, -5px);
+}
+
+.WorkSheet {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  border-radius: 16px;
+  gap: 16px;
+  box-shadow: inset 5px 5px 9px #e9e9ef, inset -5px -5px 9px #fdfdff;
+}
+.WorkSheet .reportMain {
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+  padding: 24px 16px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  color: #231f20;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.WorkSheet .reportMain h5 {
+  text-transform: capitalize;
+}
+.WorkSheet .reportMain img {
+  height: 60px;
+  width: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.WorkSheet .reportMain:hover {
   z-index: 2;
   box-shadow: 0px 4px 24px #d5e8e9;
   transform: translate(0, -5px);

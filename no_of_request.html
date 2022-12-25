@@ -23,7 +23,10 @@
   <link rel="stylesheet" href="css/odometer.min.css" />
   <!-- Filepond css -->
   <link rel="stylesheet" href="css/filepond.min.css" />
-  
+  <!--datatable css-->
+  <link rel="stylesheet" href="css/datatable/dataTables.bootstrap5.min.css" />
+  <link rel="stylesheet" href="css/datatable/responsive.bootstrap.min.css" />
+  <link rel="stylesheet" href="css/datatable/buttons.dataTables.min.css">
   <!-- Custom style  -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -48,46 +51,76 @@
           </a>
         </li>
         <li>
-          <a href="#!">
+          <a href="reports.html">
             التقارير
+          </a>
+        </li>
+        <li>
+          <a href="work_sheet.html">
+            Work Sheet
+          </a>
+        </li>
+        <li>
+          <a href="#!">
+            no of request
           </a>
         </li>
       </ul>
     </section>
-
-    <!-- all reports page -->
-    <section class="allReportsPage">
-      <a href="waiting_for_Inspection.html" class="reportMain">
-        <img src="img/inspection.png" alt="">
-        <h5> Waiting for Inspection </h5>
-      </a>
-      <a href="mec_dashboard.html" class="reportMain">
-        <img src="img/mec.png" alt="">
-        <h5> MEC-Dashboard </h5>
-      </a>
-      <a href="contractors.html" class="reportMain">
-        <img src="img/contractors.png" alt="">
-        <h5> Contractors DashBoard </h5>
-      </a>
-      <a href="mec_comments.html" class="reportMain">
-        <img src="img/comments.png" alt="">
-        <h5> mec comments </h5>
-      </a>
-      <a href="mec_comments_date.html" class="reportMain">
-        <img src="img/comments date.png" alt="">
-        <h5> mec comments date </h5>
-      </a>
-      <a href="work_sheet.html" class="reportMain">
-        <img src="img/worksheet.png" alt="">
-        <h5> Work Sheet </h5>
-      </a>
-    </section>
-
-
-
-
-
-
+    <!-- table -->
+    <div class="tableDiv">
+      <table class="table datatable table-bordered dt-responsive nowrap table-striped align-middle">
+        <thead>
+          <tr>
+            <th>  </th>
+            <th> A </th>
+            <th> B </th>
+            <th> C </th>
+            <th> D </th>
+            <th> Total of days </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th> م / محمد ساهر </th>
+            <td> 0.0 </td>
+            <td> 25.2 </td>
+            <td> 9.5 </td>
+            <td> 0.0 </td>
+            <td> 34.7 </td>
+          </tr>
+          <tr>
+            <th> م / محمد ساهر </th>
+            <td> 0.0 </td>
+            <td> 25.2 </td>
+            <td> 9.5 </td>
+            <td> 0.0 </td>
+            <td> 34.7 </td>
+          </tr>
+          <tr>
+            <th> م / محمد ساهر </th>
+            <td> 0.0 </td>
+            <td> 25.2 </td>
+            <td> 9.5 </td>
+            <td> 0.0 </td>
+            <td> 34.7 </td>
+          </tr>
+          <tr>
+            <th> م / محمد ساهر </th>
+            <td> 0.0 </td>
+            <td> 25.2 </td>
+            <td> 9.5 </td>
+            <td> 0.0 </td>
+            <td> 34.7 </td>
+          </tr>
+         
+        </tbody>
+        <tfoot>
+          <th colspan="5"> total </th>
+          <th>  2080 </th>
+        </tfoot>
+      </table>
+    </div>
   </content>
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
   <!--((((((((((((((((( / content )))))))))))))))))))-->
@@ -122,6 +155,24 @@
   <script>
     $("header").load("header.html");
     $("footer").load("footer.html");
+  </script>
+  <!--datatable js-->
+  <script src="js/datatable/jquery.dataTables.min.js"></script>
+  <script src="js/datatable/dataTables.bootstrap5.min.js"></script>
+  <script src="js/datatable/dataTables.responsive.min.js"></script>
+  <script src="js/datatable/dataTables.buttons.min.js"></script>
+  <script src="js/datatable/buttons.print.min.js"></script>
+  <script src="js/datatable/buttons.html5.min.js"></script>
+  <script src="js/datatable/vfs_fonts.js"></script>
+  <script src="js/datatable/pdfmake.min.js"></script>
+  <script src="js/datatable/jszip.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".datatable").DataTable({
+        dom: "Bfrtip",
+        buttons: ["copy", "csv", "excel", "print", "pdf"],
+      });
+    });
   </script>
 </body>
 
