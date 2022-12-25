@@ -216,6 +216,7 @@ content {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  min-height: 100vh;
 }
 
 .statisticsSection {
@@ -634,6 +635,30 @@ content {
 .tableDiv .dtr-details .dtr-data {
   display: flex;
   white-space: break-spaces;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  padding: 16px;
+  border-radius: 10px;
+  color: #777777;
+  gap: 8px;
+}
+footer img {
+  height: 20px;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+footer .company {
+  color: #4693CF;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 /* PC device :992px. */
