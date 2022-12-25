@@ -566,7 +566,32 @@ content {
     }
   }
 }
+.tableDiv {
+  padding: 16px;
+  border-radius: 16px;
+  background-color: $whiteColor;
+  .table {
+    // text-align: center;
+    width: 100%;
+  }
 
+  .table-striped > tbody > tr:nth-of-type(odd) > *,
+  table.dataTable.table-striped > tbody > tr.odd {
+    background-color: $mainColor10;
+  }
+  .colored {
+    background-color: $mainColor !important;
+    color: $whiteColor !important;
+  }
+  .dtr-details {
+    display: flex !important;
+    flex-direction: column;
+    .dtr-data {
+      display: flex;
+      white-space: break-spaces;
+    }
+  }
+}
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================

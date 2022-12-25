@@ -572,6 +572,31 @@ content {
   margin-top: auto;
 }
 
+.tableDiv {
+  padding: 16px;
+  border-radius: 16px;
+  background-color: #ffffff;
+}
+.tableDiv .table {
+  width: 100%;
+}
+.tableDiv .table-striped > tbody > tr:nth-of-type(odd) > *,
+.tableDiv table.dataTable.table-striped > tbody > tr.odd {
+  background-color: #eaf4f4;
+}
+.tableDiv .colored {
+  background-color: #6cafb0 !important;
+  color: #ffffff !important;
+}
+.tableDiv .dtr-details {
+  display: flex !important;
+  flex-direction: column;
+}
+.tableDiv .dtr-details .dtr-data {
+  display: flex;
+  white-space: break-spaces;
+}
+
 /* PC device :992px. */
 @media (min-width: 992px) {
   body {
