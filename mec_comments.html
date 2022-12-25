@@ -23,7 +23,10 @@
   <link rel="stylesheet" href="css/odometer.min.css" />
   <!-- Filepond css -->
   <link rel="stylesheet" href="css/filepond.min.css" />
-  
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
   <!-- Custom style  -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -55,35 +58,38 @@
       </ul>
     </section>
 
-    <!-- all reports page -->
-    <section class="allReportsPage">
-      <a href="waiting_for_Inspection.html" class="reportMain">
-        <img src="img/inspection.png" alt="">
-        <h5> Waiting for Inspection </h5>
-      </a>
-      <a href="mec_dashboard.html" class="reportMain">
-        <img src="img/mec.png" alt="">
-        <h5> MEC-Dashboard </h5>
-      </a>
-      <a href="contractors.html" class="reportMain">
-        <img src="img/contractors.png" alt="">
-        <h5> Contractors DashBoard </h5>
-      </a>
-      <a href="mec_comments.html" class="reportMain">
-        <img src="img/comments.png" alt="">
-        <h5> mec comments </h5>
-      </a>
-      <a href="#!" class="reportMain">
-        <img src="img/comments date.png" alt="">
-        <h5> mec comments date </h5>
-      </a>
-      <a href="#!" class="reportMain">
-        <img src="img/worksheet.png" alt="">
-        <h5> Work Sheet </h5>
-      </a>
-    </section>
 
-
+    <table id="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Office</th>
+          <th>Age</th>
+          <th>Start date</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tiger Nixon</td>
+          <td>System Architect</td>
+          <td>Edinburgh</td>
+          <td>61</td>
+          <td>2011/04/25</td>
+          <td>$320,800</td>
+        </tr>
+        <tr>
+          <td>Garrett Winters</td>
+          <td>Accountant</td>
+          <td>Tokyo</td>
+          <td>63</td>
+          <td>2011/07/25</td>
+          <td>$170,750</td>
+        </tr>
+        <!-- Additional rows of data go here -->
+      </tbody>
+    </table>
 
 
 
@@ -122,6 +128,21 @@
   <script>
     $("header").load("header.html");
     $("footer").load("footer.html");
+  </script>
+
+  <script>
+$(document).ready(function() {
+  $("#table").DataTable();
+});
+
+$(document).ready(function() {
+  $("#table").DataTable({
+    searching: true,  // Enable searching
+    lengthChange: false,  // Disable changing the number of rows per page
+    pageLength: 5  // Display 5 rows per page
+  });
+});
+
   </script>
 </body>
 

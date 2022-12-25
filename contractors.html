@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <!-- Required meta tags -->
   <meta charset="UTF-8" />
@@ -22,12 +21,10 @@
   <!-- odometer -->
   <link rel="stylesheet" href="css/odometer.min.css" />
   <!-- Filepond css -->
-  <link rel="stylesheet" href="css/filepond.min.css" type="text/css" />
-  <link rel="stylesheet" href="css/filepond-plugin-image-preview.min.css">
+  <link rel="stylesheet" href="css/filepond.min.css" />
   <!-- Custom style  -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
   <!-- ================ Header ================= -->
   <header></header>
@@ -86,6 +83,14 @@
             <div id="el7gag_department_chart" class="apexChart" dir="ltr"></div>
           </div>
         </div>
+        <!-- chart -->
+        <div class="col-lg-4 p-2">
+          <div class="chartDiv">
+            <p class="title"> المستودعات الثانية <span> الحجاج </span> </p>
+            <p class="hint"> DEPARTMENT WISE ACTION CODE </p>
+            <div id="department_wise_chart" class="apexChart" dir="ltr"></div>
+          </div>
+        </div>
       </div>
     </section>
   </content>
@@ -115,9 +120,7 @@
   <!-- odometer counterUp  -->
   <script src="js/odometer.min.js"></script>
   <!-- filepond js -->
-  <script src="https://unpkg.com/filepond/dist/filepond.min.js"></script>
-  <script src="https://unpkg.com/jquery-filepond/filepond.jquery.js"></script>
-  <script src="js/filepond-plugin-image-preview.min.js"></script>
+  <script src="js/filepond.min.js"></script>
   <!-- custom -->
   <script src="js/Custom.js"></script>
   <!-- load header and footer -->
@@ -161,28 +164,27 @@
     };
     var chart = new ApexCharts(document.querySelector("#el7gag_side_chart"), options);
     chart.render();
-
-    // el7gag side chart
+    // el7gag department chart
     var options = {
       series: [{
         name: ' A ',
-        data: [0, 24, 57, 56, 61, 58, 63]
+        data: [0, 24, 57, 56, 61, 58]
       },
       {
         name: ' B ',
-        data: [19, 418 , 57, 56, 61, 58, 63]
+        data: [46, 57, 59, 54, 62, 58]
       },
       {
         name: ' C ',
-        data: [21, 55, 57, 56, 61, 58, 63]
+        data: [74, 83, 102, 97, 86, 106]
       },
       {
         name: ' D ',
-        data: [0, 55, 57, 56, 61, 58, 63]
+        data: [37, 42, 38, 26, 47, 50]
       },],
       chart: {
         type: 'bar',
-        height: 350
+        height: 250
       },
       plotOptions: {
         bar: {
@@ -204,14 +206,45 @@
       fill: {
         opacity: 1
       },
-    
       colors: ['#6cafb0', '#eb5c93', '#17c3a3', '#5895ec', '#647889', '#d48ae2', '#fe8338'],
     };
-     var chart = new ApexCharts(document.querySelector("#el7gag_department_chart"), options);
+    var chart = new ApexCharts(document.querySelector("#el7gag_department_chart"), options);
     chart.render();
-
-
+    // department_wise chart
+    var options = {
+      series: [{
+        name: '',
+        data: [22, 260, 13, 10,]
+      }],
+      chart: {
+        height: 250,
+        type: 'bar',
+      },
+      colors: ['#6cafb0', '#eb5c93', '#17c3a3', '#5895ec', '#647889', '#d48ae2', '#fe8338'],
+      plotOptions: {
+        bar: {
+          borderRadius: 5,
+          distributed: true,
+        }
+      },
+      dataLabels: {
+        enabled: false
+      },
+      legend: {
+        show: false
+      },
+      xaxis: {
+        categories: ['A', 'B', 'C', 'D'],
+        labels: {
+          style: {
+            colors: ['#6cafb0', '#eb5c93', '#17c3a3', '#5895ec', '#647889', '#d48ae2', '#fe8338'],
+            fontSize: '12px'
+          }
+        }
+      }
+    };
+    var chart = new ApexCharts(document.querySelector("#department_wise_chart"), options);
+    chart.render();
   </script>
 </body>
-
 </html>
