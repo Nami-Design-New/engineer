@@ -615,6 +615,11 @@ content {
     width: 100%;
   }
 
+  div.dataTables_wrapper div.dataTables_filter input{
+    margin-left: 0;
+    margin-right: 8px;
+    background-color: #ffffff50;
+  }
   .table-striped > tbody > tr:nth-of-type(odd) > *,
   table.dataTable.table-striped > tbody > tr.odd {
     background-color: $mainColor10;
@@ -631,6 +636,14 @@ content {
       white-space: break-spaces;
     }
   }
+  .active > .page-link, .page-link.active{
+    background-color: $mainColor;
+    border-color: $mainColor;
+    
+  }
+  .page-link:focus{
+    box-shadow: 0 0 0 0.25rem $mainColor30;
+  }
 }
 
 footer {
@@ -640,7 +653,7 @@ footer {
   margin-top: auto;
   background-color: $whiteColor;
   margin-bottom: 10px;
-  padding:16px;
+  padding: 16px;
   border-radius: 10px;
   color: $textColor;
   gap: 8px;
@@ -649,14 +662,69 @@ footer {
     width: auto;
     object-fit: contain;
   }
-  .company{
-    color: #4693CF;
+  .company {
+    color: #4693cf;
     display: flex;
     align-items: center;
     gap: 8px;
-
   }
 }
+
+.allProjects {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .projectType {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border: 3px solid #eeeef6;
+    padding: 16px;
+    border-radius: 10px;
+    .head {
+      font-weight: bold;
+      color: $textColor;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .projects {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      .project {
+        background-color: #eaeaf3;
+        border: 3px solid #dedeea;
+        color: $blackColor;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 120px;
+        max-width: 250px;
+        padding: 24px 16px;
+        border-radius: 16px;
+        text-align: center;
+
+        &:hover {
+          background-color: $mainColor;
+          color: $whiteColor;
+          border-color: $mainColor30;
+        }
+      }
+    }
+    &.ended {
+      background-color: #dedeea;
+      .tableDiv{
+        background-color: #eaeaf3;
+      }
+    }
+  }
+}
+
+
+
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================

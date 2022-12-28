@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="" />
+  <!-- title -->
+  <title> engineer </title>
+  <!-- favicon -->
+  <link rel="icon" type="image/x-icon" href="img/fav.svg" />
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
+  <!-- icons -->
+  <link rel="stylesheet" href="css/fontawesome.min.css" />
+  <!-- aos -->
+  <link rel="stylesheet" href="css/aos.css" />
+  <!-- select2 -->
+  <link rel="stylesheet" href="css/select2.min.css" />
+  <!-- odometer -->
+  <link rel="stylesheet" href="css/odometer.min.css" />
+  <!-- Filepond css -->
+  <link rel="stylesheet" href="css/filepond.min.css" />
+  <!--datatable css-->
+  <link rel="stylesheet" href="css/datatable/dataTables.bootstrap5.min.css" />
+  <link rel="stylesheet" href="css/datatable/responsive.bootstrap.min.css" />
+  <link rel="stylesheet" href="css/datatable/buttons.dataTables.min.css">
+  <!-- Custom style  -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
+  <!--((((((((((((((((((( content )))))))))))))))))))-->
+  <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
+  <content>
+    <!-- ================ Header ================= -->
+    <header></header>
+    <!-- ================ /Header ================= -->
+    <!-- route Nav -->
+    <section class="routeNav">
+      <button onclick="history.back()" class="Back">
+        <i class="fa-light fa-arrow-right"></i>
+      </button>
+      <ul class="navigetor">
+        <li>
+          <a href="index.html">
+            الرئيسية
+          </a>
+        </li>
+        <li>
+          <a href="##!">
+            المشاريع
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- all porjects -->
+    <section class="allProjects">
+      <!-- type -->
+      <div class="projectType">
+        <h6 class="head"> <i class="fa-light fa-diagram-project"></i> مشاريع جديدة </h6>
+        <div class="projects">
+
+          <!-- project -->
+          <a href="data_entry.html" class="project">
+            الفال
+          </a>
+        </div>
+      </div>
+      <!-- type -->
+      <div class="projectType">
+        <h6 class="head"> <i class="fa-light fa-diagram-project"></i> مشاريع جارية </h6>
+        <div class="projects">
+          <!-- project -->
+          <a href="ongoing_projects.html" class="project">
+            الحجاج
+          </a>
+          <!-- project -->
+          <a href="ongoing_projects.html" class="project">
+            الفال 
+          </a>
+          <!-- project -->
+          <a href="ongoing_projects.html" class="project">
+            المستودعات 
+          </a>
+        </div>
+      </div>
+      <!-- type -->
+      <div class="projectType ended ">
+        <h6 class="head"> <i class="fa-light fa-diagram-project"></i> مشاريع منتهية </h6>
+
+        <!-- table -->
+        <div class="tableDiv">
+          <table class="table datatable table-bordered dt-responsive nowrap  align-middle">
+            <thead>
+              <tr>
+                <th> اسم المشروع </th>
+                <th> تاريخ البدء </th>
+                <th> تاريخ الانتهاء </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td> السد العالي </td>
+                <td> 11/11/2020 </td>
+                <td> 01/01/2023 </td>
+              </tr>
+              <tr>
+                <td>  قناة السويس </td>
+                <td> 29/06/2018 </td>
+                <td> 05/12/2021 </td>
+              </tr>
+              <tr>
+                <td> المتحف الكبير </td>
+                <td> 31/04/2016 </td>
+                <td> 14/09/2019 </td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================ Footer ================= -->
+    <footer></footer>
+    <!-- ================ /Footer ================= -->
+  </content>
+  <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
+  <!--((((((((((((((((( / content )))))))))))))))))))-->
+  <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
+
+  <!--////////////////////////////////////////////////////////////////////////////////-->
+  <!--////////////////////////////////////////////////////////////////////////////////-->
+  <!--////////////////////////////////////////////////////////////////////////////////-->
+  <!--/////////////////////////////JavaScript/////////////////////////////////////////-->
+  <!--////////////////////////////////////////////////////////////////////////////////-->
+  <!--////////////////////////////////////////////////////////////////////////////////-->
+  <!--////////////////////////////////////////////////////////////////////////////////-->
+  <!-- jquery  -->
+  <script src="js/jquery.min.js"></script>
+  <!-- bootstrap -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- apper  -->
+  <script src="js/jquery.appear.js"></script>
+  <!-- select -->
+  <script src="js/select2.min.js"></script>
+  <!-- animation on scroll -->
+  <script src="js/aos.js"></script>
+  <!-- odometer counterUp  -->
+  <script src="js/odometer.min.js"></script>
+  <!-- filepond js -->
+  <script src="js/filepond.min.js"></script>
+  <!-- custom -->
+  <script src="js/Custom.js"></script>
+  <!-- load header and footer -->
+  <script>
+    $("header").load("header.html");
+    $("footer").load("footer.html");
+  </script>
+    <!--datatable js-->
+    <script src="js/datatable/jquery.dataTables.min.js"></script>
+    <script src="js/datatable/dataTables.bootstrap5.min.js"></script>
+    <script src="js/datatable/dataTables.responsive.min.js"></script>
+    <script src="js/datatable/dataTables.buttons.min.js"></script>
+    <script src="js/datatable/buttons.print.min.js"></script>
+    <script src="js/datatable/buttons.html5.min.js"></script>
+    <script src="js/datatable/vfs_fonts.js"></script>
+    <script src="js/datatable/pdfmake.min.js"></script>
+    <script src="js/datatable/jszip.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".datatable").DataTable({
+          dom: "Bfrtip",
+          buttons: ["copy", "csv", "excel", "print", "pdf"],
+        });
+      });
+    </script>
+</body>
+
+</html>

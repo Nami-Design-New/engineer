@@ -620,6 +620,11 @@ content {
 .tableDiv .table {
   width: 100%;
 }
+.tableDiv div.dataTables_wrapper div.dataTables_filter input {
+  margin-left: 0;
+  margin-right: 8px;
+  background-color: rgba(255, 255, 255, 0.3137254902);
+}
 .tableDiv .table-striped > tbody > tr:nth-of-type(odd) > *,
 .tableDiv table.dataTable.table-striped > tbody > tr.odd {
   background-color: #eaf4f4;
@@ -635,6 +640,13 @@ content {
 .tableDiv .dtr-details .dtr-data {
   display: flex;
   white-space: break-spaces;
+}
+.tableDiv .active > .page-link, .tableDiv .page-link.active {
+  background-color: #6cafb0;
+  border-color: #6cafb0;
+}
+.tableDiv .page-link:focus {
+  box-shadow: 0 0 0 0.25rem #d5e8e9;
 }
 
 footer {
@@ -655,10 +667,61 @@ footer img {
      object-fit: contain;
 }
 footer .company {
-  color: #4693CF;
+  color: #4693cf;
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.allProjects {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.allProjects .projectType {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border: 3px solid #eeeef6;
+  padding: 16px;
+  border-radius: 10px;
+}
+.allProjects .projectType .head {
+  font-weight: bold;
+  color: #777777;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.allProjects .projectType .projects {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.allProjects .projectType .projects .project {
+  background-color: #eaeaf3;
+  border: 3px solid #dedeea;
+  color: #231f20;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  max-width: 250px;
+  padding: 24px 16px;
+  border-radius: 16px;
+  text-align: center;
+}
+.allProjects .projectType .projects .project:hover {
+  background-color: #6cafb0;
+  color: #ffffff;
+  border-color: #d5e8e9;
+}
+.allProjects .projectType.ended {
+  background-color: #dedeea;
+}
+.allProjects .projectType.ended .tableDiv {
+  background-color: #eaeaf3;
 }
 
 /* PC device :992px. */
