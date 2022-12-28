@@ -23,6 +23,10 @@
   <link rel="stylesheet" href="css/odometer.min.css" />
   <!-- Filepond css -->
   <link rel="stylesheet" href="css/filepond.min.css" />
+    <!--datatable css-->
+    <link rel="stylesheet" href="css/datatable/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="css/datatable/responsive.bootstrap.min.css" />
+    <link rel="stylesheet" href="css/datatable/buttons.dataTables.min.css">
   
   <!-- Custom style  -->
   <link rel="stylesheet" href="css/style.css" />
@@ -50,12 +54,38 @@
         </li>
         <li>
           <a href="##!">
-            المشاريع
+            المهندسين
           </a>
         </li>
       </ul>
     </section>
  
+     <!-- table -->
+     <div class="tableDiv">
+      <table class="table datatable table-bordered dt-responsive nowrap table-striped align-middle text-center">
+        <thead>
+          <tr>
+            <th> اسم المهندس </th>
+            <th> المشروع </th>
+            <th> الحالة </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td> محمود الكومي </td>
+            <td> الحجاج </td>
+            <td> B </td>
+          </tr>
+          <tr>
+            <td> محمد العشري  </td>
+            <td> الفال </td>
+            <td> A </td>
+          </tr>
+        
+        </tbody>
+      </table>
+    </div>
+
     
   <!-- ================ Footer ================= -->
     <footer></footer>
@@ -93,6 +123,24 @@
     $("header").load("header.html");
     $("footer").load("footer.html");
   </script>
+    <!--datatable js-->
+    <script src="js/datatable/jquery.dataTables.min.js"></script>
+    <script src="js/datatable/dataTables.bootstrap5.min.js"></script>
+    <script src="js/datatable/dataTables.responsive.min.js"></script>
+    <script src="js/datatable/dataTables.buttons.min.js"></script>
+    <script src="js/datatable/buttons.print.min.js"></script>
+    <script src="js/datatable/buttons.html5.min.js"></script>
+    <script src="js/datatable/vfs_fonts.js"></script>
+    <script src="js/datatable/pdfmake.min.js"></script>
+    <script src="js/datatable/jszip.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".datatable").DataTable({
+          dom: "Bfrtip",
+          buttons: ["copy", "csv", "excel", "print", "pdf"],
+        });
+      });
+    </script>
 </body>
 
 </html>
