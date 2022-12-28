@@ -641,7 +641,8 @@ content {
   display: flex;
   white-space: break-spaces;
 }
-.tableDiv .active > .page-link, .tableDiv .page-link.active {
+.tableDiv .active > .page-link,
+.tableDiv .page-link.active {
   background-color: #6cafb0;
   border-color: #6cafb0;
 }
@@ -722,6 +723,35 @@ footer .company {
 }
 .allProjects .projectType.ended .tableDiv {
   background-color: #eaeaf3;
+}
+
+.tableSection {
+  background-color: #6cafb0;
+  border-radius: 16px;
+}
+.tableSection .tableHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 16px;
+  border-radius: 16px;
+  color: #ffffff;
+}
+.tableSection .tableHead h6 {
+  font-weight: bold;
+}
+.tableSection .tableHead .customBtn {
+  background-color: #eaf4f4;
+  border-radius: 16px;
+  font-size: 13px;
+  padding: 6px 18px;
+  border: 3px solid #d5e8e9;
+}
+.tableSection .tableHead .customBtn:hover {
+  border: 3px solid #eaf4f4;
+  background-color: #ffffff;
+  color: #6cafb0;
 }
 
 /* PC device :992px. */
